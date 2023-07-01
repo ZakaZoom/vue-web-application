@@ -1,20 +1,21 @@
 <script setup>
 import {mdiAccount, mdiHeart,} from "@mdi/js"
-import Logo from "./components/Logo.vue";
-import AddressPopup from "./components/AddressPopup.vue";
+import HomePage from "./pages/HomePage.vue";
+import PopularCategoriesSmall2 from "./components/PopularCategoriesSmall2.vue";
+import WelcomePage from "./pages/WelcomePage.vue"
 </script>
 
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" class="container">
+    <div class="subcontainer">
 
-    <v-row align="center"
-      justify="center">
-        <v-col align-center>
-          <!-- <Logo></Logo> -->
-          <AddressPopup></AddressPopup>
-        </v-col>
-    </v-row>
-    <v-bottom-navigation grow>
+      <!-- <PopularCategoriesSmall2></PopularCategoriesSmall2> -->
+      <!-- <HomePage></HomePage> -->
+      <WelcomePage>
+        
+      </WelcomePage>
+
+        <v-bottom-navigation grow>
   <v-btn value="recent">
     <v-icon :icon="mdiAccount"></v-icon>
 
@@ -33,6 +34,23 @@ import AddressPopup from "./components/AddressPopup.vue";
     Nearby
   </v-btn>
 </v-bottom-navigation>
+    </div>
+
+
+
+
+    
+
   </v-app>
 </template>
 
+<style scoped>
+.container {
+  width: 100%;
+}
+.subcontainer { 
+  width: 50%;
+  margin: auto;
+}
+
+</style>

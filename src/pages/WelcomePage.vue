@@ -12,6 +12,7 @@
 <script>
 import Logo from '../components/Logo.vue';
 export default {
-    name: "WelcomePage"
+    name: "WelcomePage",
+    components: {Logo}
 }
 </script>

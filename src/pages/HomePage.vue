@@ -1,15 +1,22 @@
 <template>
-    <div>
+    <v-col>
         <AddressPopup></AddressPopup>
-        <h1 class="first-title">Популярные категории</h1>
+
+        
+        <!-- <h1 class="first-title">Популярные категории</h1> -->
+        
+        
+        <!-- TODO Add Horizontal Row -->
         <PopularCategorySmall>
-            
         </PopularCategorySmall>
         <!-- TODO Add Horizontal Row -->
-        <v-row>
 
+        <v-row>
+            <h1 class="first-title">Акции</h1>
+            <v-spacer></v-spacer>
+            <h1 class="see_all">См. все</h1>
         </v-row>
-    </div>
+    </v-col>
 </template>
 
 <script>
@@ -23,7 +30,8 @@ export default {
             {title: "Овощи и фрукты", src: "ю.ю.ю.ю"},
             {title: "Рыбв", src: ""}
         ]
-    })
+    }),
+    components: {AddressPopup, PopularCategorySmall}
 
 }
 </script>
@@ -33,10 +41,20 @@ export default {
 <style scoped>
 .first-title{
     color: #000;
-    text-align: right;
+    text-align: left;
     font-size: 18px;
     font-family: Nunito;
     font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+}
+.see_all {
+    color: #000;
+    text-align: right;
+    font-size: 16px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: -0.15px;
 }
